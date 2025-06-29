@@ -2,7 +2,8 @@
 # Scoped linting (i.e. code formatting) should be done in the respective language-specific workflows.
 name: Repo Lint
 
-permissions: read-all
+permissions:
+  contents: read
 
 on:
   pull_request:
