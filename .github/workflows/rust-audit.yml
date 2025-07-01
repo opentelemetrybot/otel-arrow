@@ -1,6 +1,4 @@
 name: Rust-Audit
-permissions:
-  contents: read
 
 on:
   push:
@@ -10,6 +8,9 @@ on:
       - 'rust/otap-dataflow/Cargo.toml'
   schedule:
     - cron: '0 2 * * 1' # run at 2 AM UTC every Monday
+
+permissions:
+  contents: read
 
 jobs:
   audit:
