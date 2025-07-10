@@ -53,3 +53,16 @@ jobs:
 
     - name: Validate Renovate config
       run: npx --yes --package renovate -- renovate-config-validator --strict
+
+  codeql-permissions:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: check out code
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+    - name: Install PyYAML
+      run: pip install PyYAML
+
+    - name: Validate CodeQL workflow permissions
+      run: python3 ./tools/validate-codeql-permissions.py
