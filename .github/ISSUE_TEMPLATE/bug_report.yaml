@@ -1,0 +1,114 @@
+name: Bug Report
+description: Create a report to help us improve
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Use this to report bugs in the otel-arrow project.
+
+  - type: input
+    id: component
+    attributes:
+      label: Component(s)
+      description: Which component(s) does this issue relate to?
+      placeholder: e.g. go/pkg/otel/arrow_record, rust/src/lib.rs, collector/cmd/otelarrowcol
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe what you did, what you expected to happen, and what actually happened.
+      placeholder: A clear and concise description of the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What are the reproduction steps?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+      description: What did you expect to happen?
+      placeholder: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      description: What actually happened?
+      placeholder: A clear and concise description of what actually happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of otel-arrow are you using?
+      placeholder: e.g. v0.23.0, main, commit hash
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment information
+      description: OS, Go version, etc.
+      placeholder: e.g. macOS 12.3, Go 1.19.5
+    validations:
+      required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: OpenTelemetry Collector version and config
+      description: What version of the OpenTelemetry Collector are you using and what is your configuration?
+      placeholder: |
+        Collector version: v0.130.0
+        Config:
+        ```yaml
+        receivers:
+          otelarrow:
+            protocols:
+              grpc:
+                endpoint: 0.0.0.0:4317
+        ...
+        ```
+      render: yaml
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Any additional information you think may be relevant to this issue.
+
+  - type: dropdown
+    attributes:
+      label: Tip
+      description: This element is static, used to render a helpful sub-heading for end-users and community members to help prioritize issues. Please leave as is.
+      options:
+        - <sub>[React](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) with 👍 to help prioritize this issue. Please use comments to provide useful context, avoiding `+1` or `me too`, to help us triage it. Learn more [here](https://opentelemetry.io/community/end-user/issue-participation/).</sub>
+      default: 0

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: OpenTelemetry Community Support
+    url: https://opentelemetry.io/community/
+    about: Please ask and answer questions here.
+  - name: OpenTelemetry Slack
+    url: https://cloud-native.slack.com/archives/C07S4Q67LTF
+    about: For live discussion, join us on Slack in the #otel-arrow channel.
