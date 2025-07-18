@@ -7,7 +7,7 @@
     "go": "1.23.0"
   },
   "extends": [
-    "config:recommended",
+    "config:best-practices",
     "docker:pinDigests",
     "helpers:pinGitHubActionDigestsToSemver"
   ],
